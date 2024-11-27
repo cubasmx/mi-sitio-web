@@ -1,8 +1,8 @@
-# Usamos la imagen de Nginx
+# Usamos la imagen de Nginx como base
 FROM nginx:alpine
 
-# Copiamos los archivos del sitio web a la carpeta predeterminada de Nginx
-COPY ./dist /usr/share/nginx/html
+# Copiamos todos los archivos del sitio web al contenedor de Nginx
+COPY . /usr/share/nginx/html
 
-# Exponemos el puerto 80
+# Exponemos el puerto 80 para servir el sitio
 EXPOSE 80
