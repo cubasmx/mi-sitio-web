@@ -5,4 +5,5 @@ FROM nginx:latest
 COPY . /usr/share/nginx/html
 
 # Expón el puerto donde correrá el servidor
-EXPOSE 80
+ENV PORT 80
+EXPOSE $PORT
